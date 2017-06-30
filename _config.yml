@@ -3,6 +3,7 @@
 #
 # Jekyll Settings
 #
+baseurl: ""
 defaults:
   -
     scope:
@@ -11,6 +12,8 @@ defaults:
     values:
       author: "Brad Christie"
       layout: "post"
+      image: "/assets/img/placeholder-1280x853.png"
+      thumbnail: "/assets/img/placeholder-320x213.png"
   -
     scope:
       path: ""
@@ -29,6 +32,17 @@ webrick:
 # Site Settings
 #
 title: Brad Christie
-description: A website and blog for Brad Christie.
+description: "A website and blog for Brad Christie."
+slogan: "Learn.\r\nCreate.\r\nImpress."
+
+technologies: "C# .NET,Entity Framework,Git,HTML,JavaScript,jQuery,KnockoutJS,MySQL,NodeJS,PHP,Sitecore,SQL Server,TypeScript"
+#facebook_username: bradedward
+linkedin_username: bradachristie
 twitter_username: bradachristie
 github_username:  bradchristie-me
+
+
+
+
+# Site layout settings
+mutli_lang: true

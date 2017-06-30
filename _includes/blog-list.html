@@ -1,0 +1,69 @@
+<div class="layout with-right-sidebar js-layout">
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="blog">
+        <div class="row">
+          {% for post in site.posts %}
+            {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+            <div class="col-md-12 col-sm-12">
+              <div class="blog-grid">
+                <div class="row">
+                  <div class="col-md-4 col-sm-5">
+                    <div class="blog-grid-image">
+                      <a href="{{ post.url | relative_url }}">
+                        <span class="blog-grid-image-over"></span>
+                        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-md-8 col-sm-7">
+                    <h3 class="blog-grid-title">
+                      <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                    </h3>
+                    {% if post.excerpt %}
+                    <p class="blog-grid-excerpt">{{ post.excerpt | escape }}</p>
+                    {% endif %}
+                    <div class="blog-grid-meta">
+                      <span class="blog-grid-date">{{ post.date | date: date_format }}</span>
+                      <span class="blog-grid-author">by {{ post.author | escape }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3 hidden-xs">
+      <div class="sidebar js-sidebar-fixed">
+        <nav class="menu-vertical-wrapper">
+          <ul class="menu-vertical  js-menu-vertical" data-prepend-to=".js-layout" data-select="Menu">
+          {% assign sorted_categories = site.categories | sort {|left, right| left[0] <=> right[0]} %}
+          {% for tag in sorted_categories %}
+            <li>
+              <a  id="{{ tag[0] }}" href="#{{ tag[0] | capitalize }}">{{ tag[0] | capitalize }}</a>
+              <ul class="post-list">
+                {% assign pages_list = tag[1] %}
+                {% for post in pages_list %}
+                  {% if post.title != null %}
+                  {% if group == null or group == post.group %}
+                  <li>
+                    <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                  </li>
+                  {% endif %}
+                  {% endif %}
+                {% endfor %}
+                {% assign pages_list = nil %}
+                {% assign group = nil %}
+              </ul>
+            </li>
+          {% endfor %}
+          </ul>
+        </nav>
+        {% include widget-tags.html %}
+        {% include widget-search.html %}
+      </div>
+    </div>
+  </div>
+</div>

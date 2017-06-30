@@ -1,46 +1,224 @@
-<footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>
-            {% if site.author %}
-              {{ site.author | escape }}
-            {% else %}
-              {{ site.title | escape }}
-            {% endif %}
-            </li>
-            {% if site.email %}
-            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description | escape }}</p>
+<footer class="js-footer-is-fixed">
+  <div class="footer-extended">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="footer-extended-container">
+            <div class="row">
+              <div class="col-md-2 col-sm-2 col-xs-4">
+                <div class="footer-extended-menu">
+                  <h5 class="footer-extended-menu-title">About</h5>
+                  <ul class="footer-extended-menu-list">
+                    <li>
+                      <a href="#">Our Vision</a>
+                    </li>
+                    <li>
+                      <a href="#">Technologies</a>
+                    </li>
+                    <li>
+                      <a href="#">Newsletter</a>
+                    </li>
+                    <li>
+                      <a href="#">Blog</a>
+                    </li>
+                    <li>
+                      <a href="#">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-2 col-sm-2 col-xs-4">
+                <div class="footer-extended-menu">
+                  <h5 class="footer-extended-menu-title">Downloads</h5>
+                  <ul class="footer-extended-menu-list">
+                    <li>
+                      <a href="#">All releases</a>
+                    </li>
+                    <li>
+                      <a href="#">Source code</a>
+                    </li>
+                    <li>
+                      <a href="#">Platforms</a>
+                    </li>
+                    <li>
+                      <a href="#">License</a>
+                    </li>
+                    <li>
+                      <a href="#">Terms of Use</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-2 col-sm-2 col-xs-4">
+                <div class="footer-extended-menu">
+                  <h5 class="footer-extended-menu-title">Docs</h5>
+                  <ul class="footer-extended-menu-list">
+                    <li>
+                      <a href="#">Docs</a>
+                    </li>
+                    <li>
+                      <a href="#">Beginner's Guide</a>
+                    </li>
+                    <li>
+                      <a href="#">FAQ</a>
+                    </li>
+                    <li>
+                      <a href="#">Non-English Docs</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="clearfix visible-xs-block"></div>
+              <div class="col-md-2 col-sm-2 col-xs-4">
+                <div class="footer-extended-menu">
+                  <h5 class="footer-extended-menu-title">Community</h5>
+                  <ul class="footer-extended-menu-list">
+                    <li>
+                      <a href="#">Diversity</a>
+                    </li>
+                    <li>
+                      <a href="#">Mailing Lists</a>
+                    </li>
+                    <li>
+                      <a href="#">Wiki</a>
+                    </li>
+                    <li>
+                      <a href="#">Merchandise</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-8">
+                <div class="footer-extended-menu">
+                  <h5 class="footer-extended-menu-title">Subscribe</h5>
+                  <ul class="socials-footer">
+                    {% if site.facebook_username %}
+                    <li>
+                      <a href="https://www.facebook.com/{{ site.facebook_username }}" class="socials-footer-link">
+                        <i class="fa fa-facebook"></i>
+                      </a>
+                    </li>
+                    {% endif %}
+                    {% if site.twitter_username %}
+                    <li>
+                      <a href="https://www.twitter.com/{{ site.twitter_username }}" class="socials-footer-link">
+                        <i class="fa fa-twitter"></i>
+                      </a>
+                    </li>
+                    {% endif %}
+                    {% if site.youtube_username %}
+                    <li>
+                      <a href="#" class="socials-footer-link">
+                        <i class="fa fa-youtube-play"></i>
+                      </a>
+                    </li>
+                    {% endif %}
+                    {% if site.linkedin_username %}
+                    <li>
+                      <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" class="socials-footer-link">
+                        <i class="fa fa-linkedin"></i>
+                      </a>
+                    </li>
+                    {% endif %}
+                    {% if site.gplus_username %}
+                    <li>
+                      <a href="#" class="socials-footer-link">
+                        <i class="fa fa-google-plus"></i>
+                      </a>
+                    </li>
+                    {% endif %}
+                    {% if site.github_username %}
+                    <li>
+                      <a href="https://github.com/{{ site.github_username }}" class="socials-footer-link">
+                        <i class="fa fa-github-alt"></i>
+                      </a>
+                    </li>
+                    {% endif %}
+                  </ul>
+                  <div class="subscribe-form-block-footer">
+                    <form action="#">
+                      <input type="text" name="email" id="subscribe-email-footer" class="subscribe-input-footer" placeholder="Email address">
+                      <button class="subscribe-button-footer">
+                        <i class="fa fa-angle-right"></i>
+                      </button>
+                    </form>
+                  </div>
+                  <p class="text-footer">For any questions contact us at:
+                    <a href="mailto:{{ site.email }}" target="_top">{{ site.email }}</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
   </div>
-
+  <!-- End of Footer Extended -->
+  <!-- Footer Default -->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-12">
+          <div class="footer-logo-wrapper">
+            <a href="{{ "/" | relative_url }}" class="logo-image ">
+              <img src="{{ "/assets/img/logos/logo.png" | relative_url }}" alt="logo">
+            </a>
+            <p class="slogan">{{ site.slogan | escape | newline_to_br }}</p>
+          </div>
+        </div>
+        <div class="col-md-9 col-sm-9 col-xs-12">
+          <div class="footer-wrapper">
+            <!-- Scroll top -->
+            <span class="scroll-top js-scroll-top">
+              <i class="fa fa-angle-up"></i>
+            </span>
+            <!-- End of Scroll top -->
+            <!-- Version -->
+            <div class="docs-version js-docs-version">
+              <span class="docs-current-version js-docs-current-version">v3.5</span>
+              <ul class="js-docs-version-list">
+                <li>
+                  <a href="#">1.0</a>
+                </li>
+                <li>
+                  <a href="#">1.5</a>
+                </li>
+                <li>
+                  <a href="#">2.5</a>
+                </li>
+                <li>
+                  <a href="#">3.0</a>
+                </li>
+                <li>
+                  <a href="#">3.1</a>
+                </li>
+              </ul>
+            </div>
+            <!-- End of Version -->
+            {% assign default_paths = site.pages | map: "path" %}
+            {% assign page_paths = site.header_pages | default: default_paths %}
+            <ul class="footer-menu helper right">
+            {% for path in page_paths %}
+              {% assign my_page = site.pages | where: "path", path | first %}
+                {% if my_page.title %}
+                <li>
+                  <a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+                </li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+            <p class="copyright helper right">
+              Copyright &copy; 2017 
+              {% if site.author %}
+                {{ site.author | escape }}
+              {% else %}
+                {{ site.title | escape }}
+              {% endif %}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>

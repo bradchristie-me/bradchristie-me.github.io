@@ -1,0 +1,27 @@
+<div class="blog-grid">
+  {% for post in site.posts %}
+    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+    <div class="row">
+      <div class="col-md-4 col-sm-5">
+        <div class="blog-grid-image">
+          <a href="/">
+            <span class="blog-grid-image-over"></span>
+            <img src="http://placehold.it/1280x853" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="col-md-8 col-sm-7">
+        <h3 class="blog-grid-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h3>
+        {% if post.excerpt %}
+        <p class="excerpt">{{ post.excerpt | escape }}</p>
+        {% endif %}
+        <div class="blog-grid-meta">
+          <span class="blog-grid-date">{{ post.date | date: date_format }}</span>
+          <span class="blog-grid-author">by {{ post.author | escape }}</span>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

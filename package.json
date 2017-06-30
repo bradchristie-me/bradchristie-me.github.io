@@ -1,0 +1,35 @@
+{
+  "name": "bradchristie-me",
+  "version": "1.0.0",
+  "description": "BradChristie.me",
+  "scripts": {
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bradchristie-me/bradchristie-me.github.io.git"
+  },
+  "author": "Brad Christie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bradchristie-me/bradchristie-me.github.io/issues"
+  },
+  "homepage": "https://github.com/bradchristie-me/bradchristie-me.github.io#readme",
+  "devDependencies": {
+    "animate.css": "^3.5.2",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-less": "^3.3.2",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-merge": "^0.1.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "jquery": "^2.1.3"
+  }
+}

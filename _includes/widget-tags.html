@@ -1,0 +1,20 @@
+<div class="widget">
+  <h3 class="widget-title">Categories</h3>
+  <ul class="tags">
+    {% assign tags_list = site.categories %}  
+    {% if tags_list.first[0] == null %}
+      {% for tag in tags_list %} 
+        <li class="tag-item">
+          <a href="#{{ tag }}" title="{{ site.tags[tag].size }}">{{ tag | capitalize }}</a>
+        </li>
+      {% endfor %}
+    {% else %}
+      {% for tag in tags_list %} 
+        <li class="tag-item">
+          <a href="#{{ tag[0] }}" title="{{ tag[1].size }}">{{ tag[0] | capitalize }}</a>
+        </li>
+      {% endfor %}
+    {% endif %}
+    {% assign tags_list = nil %}
+  </ul>
+</div>

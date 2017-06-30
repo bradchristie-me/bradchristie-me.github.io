@@ -2,9 +2,79 @@
 layout: default
 ---
 
+<div class="page js-page">
+  {% include header.html %}
+
+  <div class="header-back header-back-default header-back-large">
+    <div class="header-back-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="rotator">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="rotator-text">
+                      Hello, I'm Brad Christie.<br >
+                      I create stuff with
+                      <span class="js-rotator">{{ site.technologies }}</span>.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of Rotator -->
+            <div class="header-back-buttons helper center">
+              <a href="#" class="button stroke rounded large black">GitHub</a>
+              <a href="#" class="button stroke rounded large black">Download CV</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Next Section Button -->
+      <span class="next-section js-scroll-to next-section-light" data-target="#content">
+        <i class="fa-angle-down fa"></i>
+      </span>
+      <!-- End of Next Section Button -->
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="promo-title-wrapper helper pt60">
+            <h3 class="promo-title" data-icon="&#xe6af">Brad Christie</h3>
+            <p class="promo-description">Developer at your service.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="layout with-right-sidebar js-layout">
+        <div clas="row">
+          <div class="col-md-9">
+            <div class="main-content">
+              <div class="blog">
+                <div class="row">
+                  <div class="col-md-12 col-sm-12">
+                    {% include blog-grid.html %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include footer.html %}
+</div>
+
+<!--
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">Posts [home]</h1>
   
   {{ content }}
 
@@ -24,3 +94,4 @@ layout: default
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 
 </div>
+-->

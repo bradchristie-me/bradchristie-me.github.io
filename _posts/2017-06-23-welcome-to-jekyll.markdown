@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Welcome to BradChristie.me!"
+excerpt: "You'll find this post in your _posts directory."
 date:   2017-06-23 08:18:28 -0400
 categories: update
 ---
